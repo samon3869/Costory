@@ -1,0 +1,9 @@
+{% extends "./base.html" %}
+
+{% block post_container %}
+    <h2>{{ post.title }}</h2>
+    <div>작성일: {{ post.created_at }}</div>
+    <hr>
+    <div>{{ post.content | linebreaksbr }}</div>
+    <br>
+{% endblock post_container %}
