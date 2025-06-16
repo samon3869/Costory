@@ -1,0 +1,9 @@
+{% extends "./base.html" %}
+
+{% block post_container %}
+    <h3>글 목록 페이지</h3>
+            {% for post in posts %}
+                {{post.title}} {{post.created_at}} {{post.modified_at}} <br/>
+            {% endfor %}
+    <!-- Post list content goes here -->
+{% endblock post_container %}
