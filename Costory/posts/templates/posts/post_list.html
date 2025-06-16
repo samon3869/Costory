@@ -2,8 +2,20 @@
 
 {% block post_container %}
     <h3>글 목록 페이지</h3>
+
+        <table>
+            <tr>
+                <th>제목</th>
+                <th>작성일</th>
+                <th>수정일</th>
+            </tr>
             {% for post in posts %}
-                {{post.title}} {{post.created_at}} {{post.modified_at}} <br/>
+            <tr>
+                <td> <a href="/posts/{{post.id}}" %}"> {{ post.title }} </a> </td>
+                <td> {{ post.created_at }} </td>
+                <td> {{ post.modified_at }} </td>
+            </tr>
             {% endfor %}
+        </table>
     <!-- Post list content goes here -->
 {% endblock post_container %}
